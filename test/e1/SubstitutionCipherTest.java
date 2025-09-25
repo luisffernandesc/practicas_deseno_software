@@ -1,5 +1,7 @@
+package e1;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class SubstitutionCipherTest {
 
@@ -13,7 +15,7 @@ public class SubstitutionCipherTest {
      */
     @Test
     public void testEncodeBasic() {
-        assertEquals("tjnqmf", SubstitutionCipher.encode(1, "simple"));
+        Assertions.assertEquals("tjnqmf", SubstitutionCipher.encode(1, "simple"));
     }
 
     /**
@@ -26,7 +28,7 @@ public class SubstitutionCipherTest {
      */
     @Test
     public void testEncode() {
-        assertEquals("¡¡Mkñyxkjy kv Lkvóx!!", SubstitutionCipher.encode(10, "¡¡Cañonazo al Balón!!"));
+        Assertions.assertEquals("¡¡Mkñyxkjy kv Lkvóx!!", SubstitutionCipher.encode(10, "¡¡Cañonazo al Balón!!"));
     }
 
     /**
@@ -34,8 +36,8 @@ public class SubstitutionCipherTest {
      */
     @Test
     public void testDecode() {
-        assertEquals("simple", SubstitutionCipher.decode(1, "tjnqmf"));
-        assertEquals("¡¡Cañonazo al Balón!!", SubstitutionCipher.decode(10, "¡¡Mkñyxkjy kv Lkvóx!!"));
+        Assertions.assertEquals("simple", SubstitutionCipher.decode(1, "tjnqmf"));
+        Assertions.assertEquals("¡¡Cañonazo al Balón!!", SubstitutionCipher.decode(10, "¡¡Mkñyxkjy kv Lkvóx!!"));
     }
 
 }
