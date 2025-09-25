@@ -1,5 +1,7 @@
 public class SubstitutionCipher {
 
+    private int random;
+
     private static String[] lowerCase =
             {"a", "b", "c", "d", "e", "f",
             "g", "h", "i", "j", "k", "l", "m", "n",
